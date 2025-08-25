@@ -33,15 +33,32 @@ figure(1);
 subplot(2, 1, 1); 
 
 % Posición del carrito
-plot(t, z(:, 1), 'r', 'LineWidth', 1.5); 
+plot(t, z(:, 1), 'b', 'LineWidth', 1.5); 
 hold on;
 
 % Velocidad del carrito
-plot(t, z(:, 2), 'g', 'LineWidth', 1.5);
+plot(t, z(:, 2), 'c', 'LineWidth', 1.5);
 hold off;
 
 xlabel('Tiempo');
 ylabel('Carrito');
 title('Variables del Carrito');
 legend('Posición (z1)', 'Velocidad (z2)');
+grid on;
+
+% Variables del péndulo
+subplot(2, 1, 2); 
+
+% Ángulo del péndulo
+plot(t, z(:, 3), 'g', 'LineWidth', 1.5); 
+hold on;
+
+% Velocidad angular del péndulo
+plot(t, z(:, 4), 'm', 'LineWidth', 1.5); 
+hold off;
+
+xlabel('Tiempo (s)');
+ylabel('Péndulo');
+title('Variables del Péndulo');
+legend('Ángulo (z3)', 'Velocidad angular (z4)');
 grid on;
